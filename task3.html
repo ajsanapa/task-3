@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox All-in-One</title>
+
+<style>
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;                 /* Enables Flexbox */
+  justify-content: space-between;/* Logo left, links right */
+  align-items: center;           /* Vertical alignment */
+  padding: 16px 24px;
+  background: #222;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;                 /* Makes nav horizontal */
+  gap: 20px;                     /* Space between links */
+  list-style: none;
+}
+
+/* ---------- CARD SECTION ---------- */
+.card-container {
+  display: flex;                 /* Enables Flexbox */
+  flex-wrap: wrap;               /* Allows wrapping on small screens */
+  justify-content: center;       /* Center cards horizontally */
+  gap: 20px;                     /* Space between cards */
+  padding: 40px;
+}
+
+.card {
+  display: flex;                 /* Enables centering text */
+  justify-content: center;       /* Horizontal center */
+  align-items: center;           /* Vertical center */
+  width: 150px;
+  height: 100px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;      /* Stack nav items */
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;      /* Stack links vertically */
+    align-items: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar">
+  <div class="logo">MySite</div>
+  <ul class="nav-links">
+    <li>Home</li>
+    <li>About</li>
+    <li>Skills</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<!-- FLEXBOX CARDS -->
+<section class="card-container">
+  <div class="card">HTML</div>
+  <div class="card">CSS</div>
+  <div class="card">JavaScript</div>
+  <div class="card">React</div>
+  <div class="card">Node.js</div>
+  <div class="card">Git</div>
+</section>
+
+</body>
+</html>
